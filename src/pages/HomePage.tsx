@@ -1,17 +1,17 @@
 import React from 'react';
 
-import Directory from '../components/MenuItemList/MenuItemList';
+import MenuItemList from '../components/MenuItemList/MenuItemList';
 
 import { getDirectoryItems } from '../services/homepage-service';
 
 import './HomePage.scss';
 
 const HomePage:React.FC<{}> = () => {
-    const data = getDirectoryItems;
+    const { MenuItems } = getDirectoryItems;
     return (
         <div className="homepage">
             <div className="menu-item-list">
-                <Directory MenuItems={data}/>
+                <MenuItemList MenuItems={MenuItems} />
             </div>
         </div>
     )

@@ -1,9 +1,12 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
+import { RouteComponentProps } from 'react-router';
+
 import './MenuItem.scss';
 
 import type { MenuItemProps } from '../types';
 
-const MenuItem: React.FC<MenuItemProps> = (props) => {
+const MenuItem: React.FC<MenuItemProps & RouteComponentProps> = (props) => {
     return (
         <div style={{
             backgroundImage: `url(${props.imageUrl})`
@@ -21,4 +24,4 @@ const MenuItem: React.FC<MenuItemProps> = (props) => {
     );
 }
 
-export default MenuItem;
+export default withRouter(MenuItem);
