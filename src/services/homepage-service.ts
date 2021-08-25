@@ -2,7 +2,7 @@
  * Service for homepage related things
 */
 
-import { MenuItemListProps, MenuItemProps } from "../components/types";
+import { MenuItemListProps } from "../components/types";
 
 export const getDirectoryItems:MenuItemListProps = {
     MenuItems: [
