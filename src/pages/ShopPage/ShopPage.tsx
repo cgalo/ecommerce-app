@@ -4,7 +4,7 @@ const ShopPage:React.FC<{}> = (props) => {
 
     return (
         <div>
-            
+            SHOP PAGE
         </div>
     );
 }
