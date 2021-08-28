@@ -1,5 +1,19 @@
+interface item {
+    id: number;
+    name: string;
+    imageUrl: string;
+    price: number;
+}
 
-const SHOP_DATA = [
+interface shopData{
+    id: number;
+    title: string;
+    routeName: string;
+    items: item[];
+}
+
+
+const SHOP_DATA: shopData[] = [
     {
       id: 1,
       title: 'Hats',

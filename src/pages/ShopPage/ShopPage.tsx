@@ -1,10 +1,15 @@
 import React from 'react';
 
-const ShopPage:React.FC<{}> = (props) => {
+import CollectionPreview from '../../components/CollectionPreview/CollectionPreview';
 
+import { SHOP_DATA } from '../../services/shopPage-service';
+
+const ShopPage:React.FC<{}> = (props) => {
     return (
-        <div>
-            SHOP PAGE
+        <div className="shop-page">
+            {SHOP_DATA.map(({title, items}) => (
+                <CollectionPreview title={title} items={items} />
+            ))}
         </div>
     );
 }
