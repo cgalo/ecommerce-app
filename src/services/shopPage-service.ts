@@ -1,15 +1,11 @@
-interface item {
-    id: number;
-    name: string;
-    imageUrl: string;
-    price: number;
-}
+
+import type { CollectionItemProps } from '../components/types';
 
 interface shopData{
     id: number;
     title: string;
     routeName: string;
-    items: item[];
+    items: CollectionItemProps[];
 }
 
 
