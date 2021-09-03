@@ -14,3 +14,10 @@ export interface MenuItemProps{
 export interface MenuItemListProps {
     MenuItems: MenuItemProps[]
 }
+
+export interface CollectionItemProps{
+    id: number;
+    name: string;
+    price: number;
+    imageUrl: string;
+}
