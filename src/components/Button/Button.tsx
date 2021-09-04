@@ -1,16 +1,19 @@
-import React from 'react';
+import React, { ButtonHTMLAttributes } from 'react';
 
 import './Button.scss';
 
-interface ButtonProps {
-    
-}
+// interface ButtonProps extends ButtonHTMLAttributes<any> {
+//     children: any
+// }
 
-const Button:React.FC<ButtonProps> = (props) => {
+const Button:React.FC<ButtonHTMLAttributes<any>> = (props) => {
     return (
-        <div>
-
-        </div>
+        <button 
+            className="custom-button"
+            {...props}
+        >
+            {props.children}
+        </button>
     );
 };
 

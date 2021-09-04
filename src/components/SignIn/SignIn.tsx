@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Button from '../Button/Button';
 
 import FormInput from '../FormInput/FormInput';
 
@@ -35,7 +36,7 @@ const SignIn:React.FC<{}> = (props) => {
                     label="password"
                     required
                 />
-                <input type="Submit" value="Submit Form"/>
+                <Button type="submit"> Sign In </Button>
             </form>
         </div>
     );
