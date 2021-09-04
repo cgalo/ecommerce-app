@@ -12,7 +12,6 @@ interface FormInputProps {
 }
 
 const FormInput:React.FC<FormInputProps> = (props) => {
-    const labelValue = (props.value)
     return (
         <div className="group">
             <input

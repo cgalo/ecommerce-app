@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import Button from '../Button/Button';
 
+import { signInWithGoogle } from '../../firebase/firebase-util';
+
+import Button from '../Button/Button';
 import FormInput from '../FormInput/FormInput';
 
 import './SignIn.scss';
@@ -36,7 +38,11 @@ const SignIn:React.FC<{}> = (props) => {
                     label="password"
                     required
                 />
-                <Button type="submit"> Sign In </Button>
+
+                <Button type="submit"> Sign in </Button>
+                <Button onClick={signInWithGoogle}> 
+                    {' '} Sign in with Google{' '} 
+                </Button>
             </form>
         </div>
     );
