@@ -22,9 +22,11 @@ const App: React.FC<{}> = () => {
     });
     return () => setUser(null);
   }, []);
+
+
   return (
     <div className="App">
-      <Header />
+      <Header isUserLoggedIn={user !== null}/>
       <Switch>
         <Route exact path='/' component={HomePage} />
         <Route path='/shop' component={ShopPage}/>
