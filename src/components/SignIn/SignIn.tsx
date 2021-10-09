@@ -38,11 +38,12 @@ const SignIn:React.FC<{}> = (props) => {
                     label="password"
                     required
                 />
-
-                <Button type="submit"> Sign in </Button>
-                <Button onClick={signInWithGoogle}> 
-                    {' '} Sign in with Google{' '} 
-                </Button>
+                <div className="buttons">
+                    <Button type="submit"> Sign in </Button>
+                    <Button onClick={signInWithGoogle} isGoogleSignIn> 
+                        Google Sign in
+                    </Button>
+                </div>
             </form>
         </div>
     );

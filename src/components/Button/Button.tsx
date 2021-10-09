@@ -2,14 +2,15 @@ import React, { ButtonHTMLAttributes } from 'react';
 
 import './Button.scss';
 
-// interface ButtonProps extends ButtonHTMLAttributes<any> {
-//     children: any
-// }
+interface ButtonProps extends ButtonHTMLAttributes<any> {
+    isGoogleSignIn?: boolean;
+}
 
-const Button:React.FC<ButtonHTMLAttributes<any>> = (props) => {
+const Button:React.FC<ButtonProps> = (props) => {
+    const { isGoogleSignIn } = props;
     return (
         <button 
-            className="custom-button"
+            className={`${isGoogleSignIn ? 'google-sign-in' : ''} custom-button`}
             {...props}
         >
             {props.children}
