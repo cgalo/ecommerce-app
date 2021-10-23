@@ -21,23 +21,6 @@ const SignIn:React.FC<{}> = (props) => {
             <span>Sign in with your email and password</span>
 
             <form onSubmit={handleSubmit}>
-                <FormInput 
-                    name="email" 
-                    type="email" 
-                    value={email} 
-                    onChange={(value: string) => setEmail(value)}
-                    label="email"
-                    required
-                />
-
-                <FormInput 
-                    name="password" 
-                    type="password" 
-                    value={password}
-                    onChange={(value: string) => setPassword(value)}
-                    label="password"
-                    required
-                />
                 <div className="buttons">
                     <Button type="submit"> Sign in </Button>
                     <Button onClick={signInWithGoogle} isGoogleSignIn> 

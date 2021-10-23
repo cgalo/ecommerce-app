@@ -10,7 +10,7 @@ import { firebaseConfig } from './config';
 
 const app = firebase.initializeApp(firebaseConfig);
 const auth = getAuth(app);
-const firestore = getFirestore(app);
+const db = getFirestore(app);
 const analytics = getAnalytics(app);
 
 const provider = new GoogleAuthProvider();
@@ -20,8 +20,6 @@ const signInWithGoogle = () => signInWithPopup(auth, provider);
 export {
     auth,
     analytics,
-    firestore,
-    signInWithGoogle
+    db,
+    signInWithGoogle,
 };
-
-export default firebase;
